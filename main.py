@@ -4,42 +4,20 @@ username = input("Enter GitHub username: ")
 
 url = f"https://api.github.com/users/{username}"
 response = requests.get(url)
-
-if response.status_code == 200:
-    data = response.json()
-<<<<<<< HEAD
-
-    print("\nGitHub Profile")
-    print("-------------------")
-    print("Name:", data.get("name"))
-    print("Public repos:", data.get("public_repos"))
-    print("Followers:", data.get("followers"))
-    print("Following:", data.get("following"))
-    print("Location:", data.get("location"))
-    print("\nPersonality Analysis")
-print("--------------------")
+data = response.json()
 
 repos = data.get("public_repos")
 followers = data.get("followers")
-
-if repos > 50:
-    print("Developer Type: Highly Active Open Source Contributor")
-elif repos > 10:
+print("Name:", data["name"])
+print("Public repos:", repos)
+print("Followers:", followers)
+print("\nPersonality Analysis")
+print("--------------------")
+if repos >= 50:
+    print("Developer Type: Highly Active Developer")
+elif repos >= 10:
     print("Developer Type: Active Developer")
+elif repos >=1:
+    print("Developer Type: Casual Developer")
 else:
     print("Developer Type: Beginner Developer")
-
-if followers > 1000:
-    print("Influence Level: High")
-elif followers > 100:
-    print("Influence Level: Medium")
-else:
-    print("Influence Level: Growing")
-
-=======
-    print("Name:", data["name"])
-    print("Public repos:", data["public_repos"])
-    print("Followers:", data["followers"])
-else:
-    print("User not found")
->>>>>>> 907e39995dcdddb3f63d6cba49c5d77281c55974
