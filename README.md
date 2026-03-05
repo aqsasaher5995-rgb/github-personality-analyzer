@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # GitHub Personality Analyzer
 
 This project analyzes a GitHub user's profile using the GitHub API.
@@ -80,4 +80,3 @@ github-personality-analyzer
 Author
 
 Aqsa Saher
->>>>>>> 907e39995dcdddb3f63d6cba49c5d77281c55974
