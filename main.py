@@ -7,6 +7,7 @@ response = requests.get(url)
 
 if response.status_code == 200:
     data = response.json()
+<<<<<<< HEAD
 
     print("\nGitHub Profile")
     print("-------------------")
@@ -35,3 +36,10 @@ elif followers > 100:
 else:
     print("Influence Level: Growing")
 
+=======
+    print("Name:", data["name"])
+    print("Public repos:", data["public_repos"])
+    print("Followers:", data["followers"])
+else:
+    print("User not found")
+>>>>>>> 907e39995dcdddb3f63d6cba49c5d77281c55974
