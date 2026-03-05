@@ -15,6 +15,23 @@ if response.status_code == 200:
     print("Followers:", data.get("followers"))
     print("Following:", data.get("following"))
     print("Location:", data.get("location"))
+    print("\nPersonality Analysis")
+print("--------------------")
 
+repos = data.get("public_repos")
+followers = data.get("followers")
+
+if repos > 50:
+    print("Developer Type: Highly Active Open Source Contributor")
+elif repos > 10:
+    print("Developer Type: Active Developer")
 else:
-    print("User not found")
+    print("Developer Type: Beginner Developer")
+
+if followers > 1000:
+    print("Influence Level: High")
+elif followers > 100:
+    print("Influence Level: Medium")
+else:
+    print("Influence Level: Growing")
+
